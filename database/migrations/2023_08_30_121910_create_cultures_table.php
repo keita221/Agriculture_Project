@@ -17,7 +17,7 @@ return new class extends Migration
             $table->String('image');
             $table->String('description');
             $table->Integer('prix');
-            $table->Integer('quantite-en-tone');
+            $table->Integer('quantite');
             $table->foreignId('user_id')->constrained()->ondelete('cascade');
             $table->timestamps();
         });

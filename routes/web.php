@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CultureController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -20,9 +21,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cultivateur/culture', function () {
-    return view('/cultivateur/culture');
-});
+Route::get('/cultivateur/culture',[CultureController::class,'index'])->name('culture.index');
+Route::get('/cultivateur/ajout',[CultureController::class,'affiche'])->name('culture.affiche');
+Route::post('/cultivateur/culture',[CultureController::class,'store'])->name('culture.store');
 
 Route::get('register', [LoginController::class, 'redirectTo']);
 Route::get('/show/{id}',[HomeController::class,'show'])->name('user.show');

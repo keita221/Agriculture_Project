@@ -19,14 +19,38 @@
                 </div>
                 <div class="item-menu">
                    <ul class="item-ul">
-                   <a href=""><li class="item-li">Home</li></a>
-                      <li class="item-li"><a href="">Cultures</a></li>
-                      <li class="item-li"><a href="">About</a></li>
-                      <li class="item-li"><a href="">Contact</a></li>
+                      <li><a href="" class="item-li">Home</a></li>
+                      <li><a href="" class="item-li">Cultures</a></li>
+                      <li><a href="" class="item-li">About</a></li>
+                      <li><a href="" class="item-li">Contact</a></li>
                    </ul>
                 </div>
                 <div class="item">
-                   <a href="{{ route('login') }}" class="inscrie">Se Connecter</a>
+                <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="button1" href="{{ route('login') }}">{{ __('Se Connecter') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                    <a class="deconnexion" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Deconnexion') }}
+                                    </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                   
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
                 </div>
             </div>
           </div>
@@ -35,7 +59,7 @@
            <div class="section section-img">
                  <div class="container">
                     <h1 class="titre">Faites-vous decouvrir les meilleurs<br>
-                          Culture de Agriculture Galsen</h1>
+                          Culture avec Agriculture Galsen</h1>
                     <p class="para">Decouvriez des cultures 
                          de 100% naturel </p>
                     <a href="" class="button">Nous ecrire</a>
