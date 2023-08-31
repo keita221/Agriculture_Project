@@ -7,7 +7,7 @@
     <div class="col-lg-12 margin-tb">
         <div class="">
           <div class="card  p-4">
-              <h2 class="pull-left ">Listes des differents cultures</h2>
+              <h2 class="pull-left ">Listes des differents cultures de nos cultivateurs</h2>
           </div>
        </div>
     </div>
