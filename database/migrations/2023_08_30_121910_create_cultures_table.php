@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('cultures', function (Blueprint $table) {
             $table->id();
             $table->String('nom');
-            $table->String('image');
+            $table->String('img');
             $table->String('description');
             $table->Integer('prix');
             $table->Integer('quantite');

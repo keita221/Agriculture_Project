@@ -11,10 +11,10 @@ class culture extends Model
 
     protected $fillable = [
         'nom',
-        'image',
-        'description',
+        'img',
+        'description', 
         'prix',
-        'quantite-en-tone',
+        'quantite',
         'user_id'
     ];
 

@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+  <title>Document</title>
+</head>
+<body>
 @extends('layouts.dart')
 
 @section('content')
@@ -27,15 +36,17 @@
                         <td>{{$culture->id}}</td>
                         <td>{{$culture->nom}}</td>
                         <td>
-                          <img src="{{$culture->image}}" alt="" srcset="">
+                          <img src="{{ asset($culture->image) }}" alt="" srcset="">
                         </td>
                         <td>{{$culture->description}}</td>
                         <td>{{$culture->prix}}</td>
                         <td>{{$culture->quantite}}</td>
                         <td>{{$culture->user_id}}</td>
                         <td>
-                            <a href="#" class="btn btn-info">Details</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <a href="{{route('detaille-culture',$culture->id)}}" class="btn btn-info">Details</a>
+                            <a href="{{route('culture.edit',$culture->id)}}" class="btn btn-primary">Modifier</a>
+                            <a href="{{route('culture.destroy',$culture->id)}}" class="btn btn-danger">Delete</a>
+                            
                         </td>
                     </tr>
                     @endforeach
@@ -47,3 +58,6 @@
   </div>
 </div>
 @endsection
+
+</body>
+</html>

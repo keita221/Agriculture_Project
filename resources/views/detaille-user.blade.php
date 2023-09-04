@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="row">
+<center><div class="row bg-white p-5 w-50">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             ID :</strong>
@@ -30,5 +30,5 @@
 
     </div>
     <a href="{{route('home')}}" class="btn btn-info">Acceuil</a>
-</div>
+</div></center>
 @endsection

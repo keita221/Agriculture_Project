@@ -211,6 +211,93 @@
   list-style: none;
  }
  .flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  
  }
+
+
+
+
+
+
+ .section {
+  padding: 75px 0;
+}
+label {
+  font-weight: 600;
+  display: inline;
+  color: black;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: block;
+  margin-bottom: 8px;
+}
+.item-input {
+  padding: 16px;
+  width: 100%;
+  background: gainsboro;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  border-left: 5px solid green;
+}
+.formulaire {
+  background-color: white;
+  padding: 24px;
+  border-radius:  8px 0 0 8px;
+}
+.form-parent {
+  display: flex;
+  justify-content: center;
+}
+.section-image {
+  background-color: green;
+  padding: 24px;
+  border-radius: 0 8px 8px 0;
+  
+}
+.messgae {
+  width: 100%;
+  background: gainsboro;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  border-left: 5px solid green;
+}
+.button {
+  width: 100%;
+  background-color: green;
+  border: 1px solid green;
+  padding: 8px;
+}
+
+
+.section-baige {
+  background-image: url("./../img/charo.jpg");
+  background-size: cover;
+}
+
+.item-classe {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 30px;
+}
+.item-client {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr  1fr;
+ gap: 30px;
+ width: 200px;
+}
+
+.section-title1 {
+text-align: left;
+color: #0D3973;
+font-weight: 700;
+font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.section-title2 {
+  text-align: center;
+  color: #0D3973;
+  font-weight: 700;
+  padding-bottom: 32px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}

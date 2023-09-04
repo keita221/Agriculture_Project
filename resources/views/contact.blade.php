@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-    <title>culutres</title>
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #dedede;
+        }
+    </style>
+    <title>Document</title>
 </head>
-<body class="body">
-      <header class="head">
+<body>
+<header class="head">
          <div class="container">
           <div class="menu">
                 <div class="logo">
@@ -54,71 +58,41 @@
                 </div>
             </div>
           </div>
-      </header>
-      <main>
-           <div class="section section-img">
-                 <div class="container">
-                    <h1 class="titre">Faites-vous decouvrir les meilleurs<br>
-                          Culture avec Agriculture Galsen</h1>
-                    <p class="para">Decouvriez des cultures 
-                         de 100% naturel </p>
-                    <a href="" class="button">Nous ecrire</a>
-                 </div>
-           </div> 
-           <section class="section section-produit">
-                <p class="cat">categories</p>
-                <h2 id="titre">Nos Cultures</h2>
-                   <div>
-                   
-                   </div>
-           </section>
-           <section class="section section-activites">
-                <p class="cat">Partenariat</p>
-                <h2 id="titre">Nos Activites de Travail</h2> 
-                 <div class="part">
-                    <div>
-                       <img src="{{ asset('img/act1 (1).png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/act1 (2).png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/act1 (3).png') }}" width="230px" srcset="">
-                    </div>
-                 </div>
-                 <br>
-                    <div class="part">
-                    <div>
-                       <img src="{{ asset('img/act1 (4).png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/act1 (5).png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/act1 (6).png') }}" width="230px" srcset="">
-                    </div>
-                 </div>
-           </section>
-           <section class="section section-produit">
-                <p class="cat">Services</p>
-                <h2 id="titre">Nos Partenaires de Travail</h2> 
-                <div class="part">
-                    <div>
-                       <img src="{{ asset('img/part1.png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/part2.png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/part4.png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/part5.png') }}" width="230px" srcset="">
-                    </div>
-                </div>
-           </section>
-           
-   <footer>
+</header>
+
+      <div class="section">
+          <div class="form-parent">
+               <div class="formulaire">
+                  <h2>Ecrivez-nous</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, dolorem.</p>
+                  <form>
+                        <div>
+                            <label htmlFor="">Prenom et Nom</label>
+                            <input type="text" class="item-input" name="name" placeholder="donner votre nom complet" />
+                        </div>
+                        <div>
+                            <label htmlFor="">Adresse Email</label>
+                            <input type="text" class="item-input" name="email" placeholder="donner votre email" />
+                        </div>
+                        <div>
+                            <label htmlFor="">Telephone</label>
+                            <input type="text" class="item-input" name="telephone" placeholder="donner votre telephone" />
+                        </div>
+                        <div>
+                            <label htmlFor="">Votre Message</label>
+                            <textarea name="decription" id="" cols="30" rows="4" placeholder="ecrivez ici votre message" class="messgae"></textarea>
+                        </div>
+                        <button type="submit" class="button">Envoyer</button>
+                  </form>
+               </div>
+               <div class="section-image">
+                   <img src=""alt="" srcset="" />
+               </div>
+          </div>
+       </div>
+
+
+       <footer>
         <div class="container">
           <div class='footer-item'>
             <div>
@@ -153,6 +127,5 @@
           </div>
         </div>
    </footer>
-      </main>
 </body>
 </html>

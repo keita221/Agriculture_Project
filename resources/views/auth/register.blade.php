@@ -1,21 +1,27 @@
-@extends('layouts.app')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{asset('css/login.css')}}">
+    <title>Document</title>
+</head>
+<body>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="login">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="titre">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+                        <div class="">
+                            <label for="name" class="label">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="item-input" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="donner votre nom complet">
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -26,10 +32,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="label">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="item-input" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="donner votre adresse email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -39,12 +45,12 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="profile" class="col-md-4 col-form-label text-md-end">{{ __('profile') }}</label>
+                        <div class="">
+                            <label for="profile" class="label">{{ __('profile') }}</label>
 
-                            <div class="col-md-6">
-                                <select id="name" type="text" class="form-control @error('profile') is-invalid @enderror" name="profile" value="{{ old('profile') }}" required autocomplete="profile" autofocus>
-                                    <option></option>
+                            <div class="">
+                                <select id="name" type="text" class="item-input1" name="profile" value="{{ old('profile') }}" required autocomplete="profile" autofocus autofocus >
+                                    <option placeholder="choissiez votre profile"></option>
                                     <option>Client</option>
                                     <option>Cultivateur</option>
                                 </select>
@@ -57,10 +63,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                            <label for="password" class="label">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="item-input" name="password" required autocomplete="new-password" autofocus placeholder="donner votre mot de passe">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -71,15 +77,16 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="label">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="item-input" name="password_confirmation" required autocomplete="new-password" autofocus placeholder="confirmer votre mot de passe ">
                             </div>
-                        </div>
+                        </div><br>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
+                                <a href="{{ route('login') }}" class="btn1">Login</a>
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
@@ -91,4 +98,5 @@
         </div>
     </div>
 </div>
-@endsection
+</body>
+</html>

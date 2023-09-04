@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Culture;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class CultureController extends Controller
 {
@@ -24,28 +26,65 @@ class CultureController extends Controller
     $filename = '';
 
     if ($request->hasFile('img')) {
-        $filename = $request->getSchemeAndHttpHost() . '/assets/image/' . time() . '.' .$request->img->extension();
-        $request->img->move(public_path('/assets/image/'), $filename);
+        $filename = $request->getSchemeAndHttpHost() . '/assets/img/' . time() . '.' .$request->img->extension();
+        $request->img->move(public_path('/assets/img/'), $request->img);
     }
+     
+      $user = Auth::id();
 
     $request->validate([
         'nom'=> 'required',
-        'image'=> 'required',
+        'img'=> 'required',
         'description'=> 'required',
         'prix'=> 'required',
         'quantite'=> 'required',
-        'user_id'=> 'required',
+        //'user_id'=> 'required',
 
     ]);
     
-        Culture::create([
+        $culture = Culture::create([
             'nom'=>$request->nom,
-            'image'=>$filename->image,
+            'img'=>$filename,
             'description'=>$request->description,
             'prix'=>$request->prix,
-            'quantite'=>$request->quantite,
-            'user_id'=>$request->user_id,
+            'quantite'=>$request->quantite, 
+            'user_id'=>$user,
         ]);
-        return redirect()->back();
+      
+        return redirect()->route('culture.index');
     }
+
+    public function show(string $id)
+    {
+        //
+        $detaille = Culture::findOrFail($id);
+        return view('/cultivateur/detaille',compact('detaille'));
+    }
+    public function update(Request $request, string $id)
+    {
+        $culture=Bus::find($id);
+        $culture->nom=$request->input('nom');
+        $culture->image=$request->input('image');
+        $culture->description=$request->input('description');
+        $culture->prix=$request->input('prix');
+        $culture->quantite=$request->input('quantite');
+
+        $bus->update();
+        return redirect()->route('culture.index');
+        //
+    }
+
+    public function destroy(string $id)
+    {
+        Culture::where('id',$id)->delete();
+        return redirect()->route('culture.index');
+    }
+
+    public function edit(string $id)
+    {
+        $culture=Culture::find($id);
+        return view('/cultivateur/modify',compact('culture'));
+    }
+
 }
+

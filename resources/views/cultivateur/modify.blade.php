@@ -20,27 +20,27 @@
 <div class="container">
     <div class="card p-5 bg-white w-50">
       <h2>Ajouter une Culture</h2>
-        <form action="{{route('culture.store')}}"  method="POST" enctype="multipart/form-data">
+        <form action="{{url('/cultivateur/update/'.$culture->id)}}"  method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="" class="form-label">Nom</label>
-                <input type="text" name='nom' placeholder='nom culture' class="form-control">
+                <input type="text" name='nom' placeholder='nom culture' class="form-control" value="{{ $culture->nom }}">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Image</label>
-                <input type="file" name='img' class="form-control">
+                <input type="file" name='image' class="form-control">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Description</label>
-                <input type="text" name='description' placeholder='description culture' class="form-control">
+                <input type="text" name='description' placeholder='description culture' class="form-control" value="{{ $culture->description}}">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Prix</label>
-                <input type="number" name='prix' placeholder='prix culture' class="form-control">
+                <input type="number" name='prix' placeholder='prix culture' class="form-control" value="{{ $culture->prix }}">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Quantite</label>
-                <input type="number" name='quantite' placeholder='quantite culture' class="form-control">
+                <input type="number" name='quantite' placeholder='quantite culture' class="form-control" value="{{ $culture->quantite }}">
             </div>
             <div>
                 <button type="submit" class="btn btn-primary">valider</button>

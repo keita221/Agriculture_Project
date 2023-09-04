@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-    <title>culutres</title>
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #dedede;
+        }
+    </style>
+    <title>Document</title>
 </head>
-<body class="body">
-      <header class="head">
+<body>
+<header class="head">
          <div class="container">
           <div class="menu">
                 <div class="logo">
@@ -54,71 +58,61 @@
                 </div>
             </div>
           </div>
-      </header>
-      <main>
-           <div class="section section-img">
-                 <div class="container">
-                    <h1 class="titre">Faites-vous decouvrir les meilleurs<br>
-                          Culture avec Agriculture Galsen</h1>
-                    <p class="para">Decouvriez des cultures 
-                         de 100% naturel </p>
-                    <a href="" class="button">Nous ecrire</a>
-                 </div>
-           </div> 
-           <section class="section section-produit">
-                <p class="cat">categories</p>
-                <h2 id="titre">Nos Cultures</h2>
-                   <div>
-                   
-                   </div>
-           </section>
-           <section class="section section-activites">
-                <p class="cat">Partenariat</p>
-                <h2 id="titre">Nos Activites de Travail</h2> 
-                 <div class="part">
+
+          <section class="section section-baige">
+    			    <div class="container">
+    		     
+             <div className='item-classe'>
+
+                  <div>
+                      <h1 className="section-title1">A Propos de nous</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laborum quasi et 
+                        vero aspernatur quam harum nam libero. Error quos ab exercitationem tempore dicta quae
+                         dolorem necessitatibus ratione mollitia enim aliquam facere possimus optio obcaecati
+                          vitae nobis odit et qui reprehenderit, tenetur doloribus. Quisquam ipsum sapiente 
+                          quae, atque necessitatibus tenetur nihil voluptate molestias saepe, nostrum laborum 
+                           deleniti repellendus assumenda dolor fugiat. Quod voluptatibus nisi amet totam nam!
+                            Temporibus ullam quos tenetur recusandae numquam aperiam nobis, mollitia veritatis
+                             unde quo ratione fuga autem ut dolor ex eaque ducimus eum similique nam quibusdam 
+                             dolore impedit odit fugit alias! Perferendis, quaerat dolorum.
+                      </p>
+                      <input type="submit" name="" id="env" className='button' value="Nous Contactez"/>
+                  </div>
+
+                 
+
+             </div>
+
+    			</div>
+    		</section>
+
+            <section class="section section-white">
+                <div class="container">
+
+                <h3 class="section-title2">Quelqu'uns de nos secteurs de travailles</h3>
+
+                  <div className="item-client">
                     <div>
-                       <img src="{{ asset('img/act1 (1).png') }}" width="230px" srcset="">
+                      <img src={partenaire} alt="" />
                     </div>
                     <div>
-                       <img src="{{ asset('img/act1 (2).png') }}" width="230px" srcset="">
+                      <img src={partenaire1} alt="" />
                     </div>
                     <div>
-                       <img src="{{ asset('img/act1 (3).png') }}" width="230px" srcset="">
-                    </div>
-                 </div>
-                 <br>
-                    <div class="part">
-                    <div>
-                       <img src="{{ asset('img/act1 (4).png') }}" width="230px" srcset="">
+                      <img src={partenaire2} alt="" />
                     </div>
                     <div>
-                       <img src="{{ asset('img/act1 (5).png') }}" width="230px" srcset="">
+                      <img src={partenaire3} alt="" />
                     </div>
                     <div>
-                       <img src="{{ asset('img/act1 (6).png') }}" width="230px" srcset="">
+                      <img src={partenaire4} alt="" />
                     </div>
-                 </div>
-           </section>
-           <section class="section section-produit">
-                <p class="cat">Services</p>
-                <h2 id="titre">Nos Partenaires de Travail</h2> 
-                <div class="part">
-                    <div>
-                       <img src="{{ asset('img/part1.png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/part2.png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/part4.png') }}" width="230px" srcset="">
-                    </div>
-                    <div>
-                       <img src="{{ asset('img/part5.png') }}" width="230px" srcset="">
-                    </div>
+                  </div>
                 </div>
-           </section>
-           
-   <footer>
+    		</section>
+
+    <footer>
         <div class="container">
           <div class='footer-item'>
             <div>
@@ -152,7 +146,7 @@
             </div>
           </div>
         </div>
-   </footer>
-      </main>
+    </footer>
+</header>
 </body>
 </html>

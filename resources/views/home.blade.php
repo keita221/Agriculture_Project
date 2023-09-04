@@ -9,7 +9,7 @@
           <div class="card  p-4">
           <h2 class="pull-left ">Listes des differents Utilisateur</h2>
 
-            <table class="table table-hover">
+            <table class="table table-hover bg-primary">
                     <tr>
                         <th>Num</th>
                         <th>Name</th>
