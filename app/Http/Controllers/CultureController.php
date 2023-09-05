@@ -26,8 +26,8 @@ class CultureController extends Controller
     $filename = '';
 
     if ($request->hasFile('img')) {
-        $filename = $request->getSchemeAndHttpHost() . '/assets/img/' . time() . '.' .$request->img->extension();
-        $request->img->move(public_path('/assets/img/'), $request->img);
+        $filename = $request->getSchemeAndHttpHost() . '/asset/img/' . time() . '.' .$request->img->extension();
+        $request->img->move(public_path('/asset/img/'), $filename);
     }
      
       $user = Auth::id();

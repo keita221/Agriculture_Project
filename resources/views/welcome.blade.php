@@ -62,15 +62,32 @@
                           Culture avec Agriculture Galsen</h1>
                     <p class="para">Decouvriez des cultures 
                          de 100% naturel </p>
-                    <a href="" class="button">Nous ecrire</a>
+
+                    <a href="/contact" class="button">Nous ecrire</a>
                  </div>
            </div> 
            <section class="section section-produit">
                 <p class="cat">categories</p>
                 <h2 id="titre">Nos Cultures</h2>
-                   <div>
-                   
-                   </div>
+
+                     @foreach($cultures as $culture)
+                              <div class="container">
+                                 <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                       <div class="prod p-3">
+                                             <a href="" class="voir">voir</a>
+                                             <img src="{{asset('$culture->image')}}" alt="" srcset="">
+                                             <p>{{$culture->nom}}</p>
+                                             <hr>
+                                             <div class="flex">
+                                                   <p>{{$culture->quantite}}/tones</p>
+                                                   <p>{{$culture->prix}} f</p>
+                                             </div>
+                                       </div>
+                                 </div><br>
+                              </div>
+                        @endforeach
+
+                  <center><a href="/culture" class="but">Voir Plus</a></center>
            </section>
            <section class="section section-activites">
                 <p class="cat">Partenariat</p>

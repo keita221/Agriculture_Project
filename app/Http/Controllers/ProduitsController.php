@@ -11,4 +11,10 @@ class ProduitsController extends Controller
         $cultures = Culture::all();
         return view('/culture',compact('cultures'));
     }
+
+    public function charo()
+    {
+        $cultures = Culture::all();
+        return view('/welcome',compact('cultures'));
+    }
 }

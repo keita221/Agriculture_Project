@@ -11,6 +11,9 @@
          body {
             background-color: #dedede;
          }
+         .card {
+            padding: 50px
+         }
     </style>
 </head>
 <body class="">
